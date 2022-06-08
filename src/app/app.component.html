@@ -1,32 +1,9 @@
 <header>
-    <h1>Small Time Landlord</h1>
+    <img src="../assets/Small Time Landlords.png" alt="">
 </header>
 <main>
     <h2>My Properties</h2>
-    <ul class="properties-container">
-        <li class="property-listing">
-            <img class="property-image" src="https://ap.rdcpix.com/7e1f558e2f6a5e5f5611add7cc966e76l-m2099888312s-w642_h420_q75.webp" alt="Forest Meadows">
-            <p class="address">7365 Forest Meadows Ave</p>
-            <p class="status">Rented</p>
-            <p class="end-date">Lease end date: 5/31/2023</p>
-            <label for="delete-property">Delete</label>
-            <input type="checkbox" id="delete-property" name="delete-property" value="delete-property">
-        </li>
-        <li class="property-listing">
-            <img class="property-image" src="https://ap.rdcpix.com/7e1f558e2f6a5e5f5611add7cc966e76l-m2099888312s-w642_h420_q75.webp" alt="Forest Meadows">
-            <p class="address">7365 Forest Meadows Ave</p>
-            <p class="status">Rented</p>
-            <p class="end-date">Lease end date: 5/31/2023</p>
-            <label for="delete-property">Delete</label>
-            <input type="checkbox" id="delete-property" name="delete-property" value="delete-property">
-        </li>
-        <li class="property-listing">
-            <img class="property-image" src="https://ap.rdcpix.com/7e1f558e2f6a5e5f5611add7cc966e76l-m2099888312s-w642_h420_q75.webp" alt="Forest Meadows">
-            <p class="address">7365 Forest Meadows Ave</p>
-            <p class="status">Rented</p>
-            <p class="end-date">Lease end date: 5/31/2023</p>
-            <label for="delete-property">Delete</label>
-            <input type="checkbox" id="delete-property" name="delete-property" value="delete-property">
-        </li>
+    <ul class="properties-container" *ngFor="let property of properties">
+        <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate"></app-property-listing>
     </ul>
 </main>
