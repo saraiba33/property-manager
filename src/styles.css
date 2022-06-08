@@ -1,8 +1,12 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 body {
-    margin: 0 100px;
     font-family: 'Inter', sans-serif;
+    margin-bottom: 50px;
+}
+
+main {
+    margin: 0 100px;
 }
 
 .properties-container {
@@ -11,12 +15,12 @@ body {
 }
 
 .property-listing {
+    background-color: hsl(199, 52%, 92%);
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 50px;
     grid-template-rows: 1fr 1fr 1fr;
-    border: 2px groove hsla(0, 0%, 50%, .5);
-    /* box-shadow: 2px 2px 2px 2px gray; */
+    box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
 }
 
 .address {
@@ -65,4 +69,10 @@ h1 {
 h2 {
     font-size: 30px;
     font-weight: 520;
+}
+
+header {
+    background-color: #032CA6;
+    color: #D5EAF2;
+    margin-bottom: 50px;
 }
