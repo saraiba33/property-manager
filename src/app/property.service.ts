@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Property } from 'src/models/property';
-import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
+type Response = {
+  properties: Property[];
+};
+
+const propertiesEndpoint = `${environment.baseApiUrl}/api/properties`;
 @Injectable({
   providedIn: 'root',
 })
@@ -30,7 +36,9 @@ export class PropertyService {
     },
   ];
 
+  constructor(private http: HttpClient) {}
+
   fetchProperty() {
-    return of(this.properties);
+    return this.http.get<Response>(propertiesEndpoint);
   }
 }

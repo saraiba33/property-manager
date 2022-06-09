@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseApiUrl: 'https://small-time-landlord.herokuapp.com',
 };

@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   constructor(private propertyService: PropertyService) {}
 
   ngOnInit(): void {
-    this.propertyService.fetchProperty().subscribe((property) => {
-      this.properties = property;
+    this.propertyService.fetchProperty().subscribe((response) => {
+      this.properties = response.properties;
     });
   }
 }
