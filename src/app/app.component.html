@@ -1,9 +1,11 @@
 <header>
     <img src="../assets/logo.png" alt="">
+    <app-nav-bar></app-nav-bar>
 </header>
 <main>
     <h2>My Properties</h2>
     <ul class="properties-container" *ngFor="let property of properties">
-        <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate"></app-property-listing>
+        <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
+        </app-property-listing>
     </ul>
 </main>

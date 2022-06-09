@@ -7,6 +7,25 @@
     box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
 }
 
+.property-listing:hover {
+    animation: bounce 1s linear;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px)
+    }
+    40% {
+        transform: translateY(0px)
+    }
+    60% {
+        transform: translateY(-2px)
+    }
+    80% {
+        transform: translateY(-0px)
+    }
+}
+
 .address {
     grid-column: 1 / span 1;
     grid-row: 1 /span 1;
