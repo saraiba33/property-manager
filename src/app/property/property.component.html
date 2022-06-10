@@ -10,11 +10,3 @@
 
 
 </div>
-
-<div id="product-page">
-    <p *ngIf="error; else productListing" class="error">There was a problem getting the product list.</p>
-    <ng-template #productListing>
-        <app-product-listing *ngIf="product" id="{{product.id}}" [name]="product.name" [description]="product.description" [imageUrl]="product.imageUrl"></app-product-listing>
-    </ng-template>
-    <a routerLink="/" class="back-link">Go back</a>
-</div>
