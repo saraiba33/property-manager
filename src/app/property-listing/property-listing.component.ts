@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./property-listing.component.css'],
 })
 export class PropertyListingComponent {
+  @Input() id!: number;
   @Input() address!: string;
   @Input() status!: string;
   @Input() endDate?: string;

@@ -9,10 +9,11 @@ import { PropertyService } from '../property.service';
 })
 export class MyPropertiesComponent implements OnInit {
   properties: Property[] = [];
+  error = false;
 
   constructor(private propertyService: PropertyService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.propertyService.fetchProperty().subscribe((response) => {
       this.properties = response.properties;
     });
