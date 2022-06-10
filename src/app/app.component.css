@@ -1,21 +1,39 @@
-.properties-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
 img {
     padding-bottom: 20px;
     padding-left: 20px;
     width: 360px;
 }
 
-h2 {
-    font-size: 30px;
-    font-weight: 600;
-}
-
 header {
     background-color: #032CA6;
     margin-bottom: 50px;
     padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.footer-img {
+    width: 50px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.powered {
+    align-self: center;
+    font-size: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    padding: 10px;
+    position: fixed;
+    background-color: #032CA6;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* Height of the footer*/
+    height: 100px;
+    margin-right: 20px;
 }

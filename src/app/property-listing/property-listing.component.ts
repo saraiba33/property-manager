@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class PropertyListingComponent {
   @Input() address!: string;
   @Input() status!: string;
-  @Input() endDate!: string;
+  @Input() endDate?: string;
   @Input() image?: string;
 }
