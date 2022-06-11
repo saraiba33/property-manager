@@ -1,0 +1,31 @@
+<h2>Add New Property</h2>
+<form #loginForm="ngForm">
+    <label>Address</label>
+    <input name="address" type="text" ngModel />
+
+    <label>Choose an option</label>
+    <select required>
+    <option value="none"></option>
+    <option value="">Rented</option>
+    <option value="option2">Vacant</option>
+    <option value="option3">Under Renovation</option>
+  </select>
+
+    <label>Image</label>
+    <input name="image" type="text" ngModel />
+
+    <label>Lease End Date</label>
+    <input name="end-date" type="date" ngModel />
+
+    <label>Tenant</label>
+    <input name="tenant" type="text" ngModel />
+
+    <label for="upload">Lease Upload</label>
+    <input type="file" ngModel>
+
+    <label for="upload">Application Upload</label>
+    <input type="file" ngModel>
+
+    <input type="submit" value="Add">
+
+</form>

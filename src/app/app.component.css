@@ -1,7 +1,28 @@
-img {
+.large-logo {
     padding-bottom: 20px;
     padding-left: 20px;
     width: 360px;
+}
+
+@media (min-width: 790px) {
+    .small-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 790px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .small-logo {
+        padding: 10px;
+        width: 50px;
+        align-self: center;
+    }
+    .large-logo {
+        display: none;
+    }
 }
 
 header {
@@ -22,12 +43,23 @@ header {
     font-size: 10px;
 }
 
+@media (max-width: 790px) {
+    .footer-img {
+        width: 30px;
+        margin-top: 10px;
+        align-self: center;
+    }
+    .powered {
+        align-self: center;
+        font-size: 5px;
+    }
+}
+
 footer {
     display: flex;
     justify-content: end;
     align-content: center;
     padding: 10px;
-    position: fixed;
     background-color: #032CA6;
     color: white;
     bottom: 0;

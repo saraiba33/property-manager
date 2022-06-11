@@ -24,3 +24,7 @@ export class PropertyService {
     return this.http.get<Property>(url);
   }
 }
+
+// getProperty(id: number, properties: Property[]) {
+//     return properties.find((property) => property.id == id);
+//   }

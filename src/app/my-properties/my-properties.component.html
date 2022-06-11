@@ -1,8 +1,13 @@
-<h2>My properties</h2>
-<ul class="properties-container" *ngFor="let property of properties">
-    <a routerLink="/my-properties/{{property.id}}">
-        <app-property-listing [id]="property.id" [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
-        </app-property-listing>
-    </a>
-
-</ul>
+<p *ngIf="error; else propertyList" class="error">There was a problem getting the property list.</p>
+<ng-template #propertyList>
+    <h2>My properties</h2>
+    <div class="button-container">
+        <a class="add-button" routerLink="/add-property">Add New Property</a>
+    </div>
+    <ul class="properties-container" *ngFor="let property of properties">
+        <a routerLink="/my-properties/{{property.id}}">
+            <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
+            </app-property-listing>
+        </a>
+    </ul>
+</ng-template>

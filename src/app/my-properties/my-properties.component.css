@@ -2,3 +2,40 @@
     display: grid;
     grid-template-columns: 1fr;
 }
+
+.button-container {
+    display: flex;
+    justify-content: end;
+}
+
+.add-button {
+    background-color: #5670BF;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.add-button:link {
+    color: white;
+}
+
+
+/* visited link */
+
+.add-button:visited {
+    color: white;
+}
+
+
+/* mouse over link */
+
+.add-button:hover {
+    background-color: #4563BF;
+}
+
+
+/* selected link */
+
+.add-button:active {
+    color: yellow;
+}

@@ -1,12 +1,18 @@
 <a routerLink="/my-properties" class="back-link">Go back</a>
 
-<div class="individual-porperty">
+<p *ngIf="error; else propertyDetail" class="error">There was a problem getting the property list.</p>
+<ng-template #propertyDetail>
+    <ul class="properties-container" *ngIf="property">
+        <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
+        </app-property-listing>
+    </ul>
+</ng-template>
+
+
+<!-- <div class="individual-porperty">
     <div *ngIf="property">
-        <img src="{{property.image}}" alt="property-image">
+        <img src="" alt="{{property.id}}">
         <h3>{{property.address}}</h3>
         <p>{{property.status}}</p>
         <p>{{property.endDate}}</p>
-    </div>
-
-
-</div>
+    </div> -->

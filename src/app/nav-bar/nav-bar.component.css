@@ -1,36 +1,52 @@
-ul {
+.nav-bar {
     display: flex;
     justify-content: center;
 }
 
-a {
+@media (max-width: 790px) {
+    .nav-bar {
+        display: block;
+        text-align: center;
+    }
+}
+
+.nav-links {
     text-decoration: none;
     color: white;
     padding: 20px;
     font-size: 24px;
 }
 
-a:link {
+@media (max-width: 790px) {
+    .nav-links {
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+.nav-links:link {
     color: white;
 }
 
 
 /* visited link */
 
-a:visited {
+.nav-links:visited {
     color: white;
 }
 
 
 /* mouse over link */
 
-a:hover {
+.nav-links:hover {
     color: #6AB9D9;
 }
 
 
 /* selected link */
 
-a:active {
+.nav-links:active {
     color: yellow;
 }
