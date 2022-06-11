@@ -1,14 +1,15 @@
 <h2>Add New Property</h2>
-<form #loginForm="ngForm">
-    <label>Address</label>
-    <input name="address" type="text" ngModel />
+<form #addProperty="ngForm" (ngSubmit)="addPropertyInfo(addProperty.value)">
 
-    <label>Choose an option</label>
-    <select required>
+    <label class="address">Address</label>
+    <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel />
+
+    <label>Property status</label>
+    <select name="status">
     <option value="none"></option>
-    <option value="">Rented</option>
-    <option value="option2">Vacant</option>
-    <option value="option3">Under Renovation</option>
+    <option value="rented">Rented</option>
+    <option value="vacant">Vacant</option>
+    <option value="under-renovation">Under Renovation</option>
   </select>
 
     <label>Image</label>
@@ -17,14 +18,38 @@
     <label>Lease End Date</label>
     <input name="end-date" type="date" ngModel />
 
-    <label>Tenant</label>
-    <input name="tenant" type="text" ngModel />
+    <label>Rent Amount</label>
+    <input name="rent-amount" type="number" ngModel />
 
-    <label for="upload">Lease Upload</label>
-    <input type="file" ngModel>
+    <label>Tenant 1</label>
+    <input name="tenant" type="text" placeholder="e.g. John Doe" ngModel />
 
-    <label for="upload">Application Upload</label>
-    <input type="file" ngModel>
+    <label>Contact Number</label>
+    <input name="tenant1-contact" type="text" placeholder="e.g. 555-555-5555" ngModel />
+
+    <label>Tenant 2</label>
+    <input name="tenant" type="text" placeholder="e.g. John Doe" ngModel />
+
+    <label>Contact Number</label>
+    <input name="tenant2-contact" type="text" placeholder="e.g. 555-555-5555" ngModel />
+
+    <label>Emergency Contact 1</label>
+    <input name="emergency-contact1" type="text" placeholder="e.g. John Doe" ngModel />
+
+    <label>Emergency Contact Number</label>
+    <input name="emergency-contact1-number" type="text" placeholder="e.g. 555-555-5555" ngModel />
+
+    <label>Emergency Contact 2</label>
+    <input name="emergency-contact2" type="text" placeholder="e.g. John Doe" ngModel />
+
+    <label>Emergency Contact Number</label>
+    <input name="emergency-contact2-number" type="text" placeholder="e.g. 555-555-5555" ngModel />
+
+    <label for="lease-upload">Lease Upload</label>
+    <input type="file" name="lease-upload" ngModel>
+
+    <label for="app-upload">Application Upload</label>
+    <input type="file" name="app-upload" ngModel>
 
     <input type="submit" value="Add">
 

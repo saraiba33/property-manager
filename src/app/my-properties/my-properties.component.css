@@ -6,13 +6,28 @@
 .button-container {
     display: flex;
     justify-content: end;
+    flex-wrap: nowrap;
+    margin-top: 18px;
 }
 
 .add-button {
-    background-color: #5670BF;
+    background-color: #6AB9D9;
     text-decoration: none;
     padding: 10px;
     border-radius: 4px;
+}
+
+@media (max-width: 790px) {
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .add-button {
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 12px;
+    }
 }
 
 .add-button:link {

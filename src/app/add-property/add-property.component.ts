@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+
+import { Property } from 'src/models/property';
 
 @Component({
   selector: 'app-add-property',
@@ -7,5 +8,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./add-property.component.css'],
 })
 export class AddPropertyComponent {
-  disableSelect = new FormControl(false);
+  addPropertyInfo(values: Property[]) {
+    console.log(values);
+  }
 }
