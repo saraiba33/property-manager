@@ -1,13 +1,16 @@
+<h2>My properties</h2>
+<div class="button-container">
+    <a class="add-button" routerLink="/add-property">Add New Property</a>
+</div>
 <p *ngIf="error; else propertyList" class="error">There was a problem getting the property list.</p>
 <ng-template #propertyList>
-    <h2>My properties</h2>
-    <div class="button-container">
-        <a class="add-button" routerLink="/add-property">Add New Property</a>
-    </div>
-    <ul class="properties-container" *ngFor="let property of properties">
-        <a routerLink="/my-properties/{{property.id}}">
-            <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
-            </app-property-listing>
-        </a>
+
+    <ul class="properties-container">
+        <li *ngFor="let property of properties">
+            <a routerLink="/my-properties/{{property.id}}">
+                <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate" [tenant1]="property.tenant1" [tenant1Contact]="property.tenant1Contact">
+                </app-property-listing>
+            </a>
+        </li>
     </ul>
 </ng-template>

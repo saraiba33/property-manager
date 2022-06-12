@@ -9,6 +9,8 @@ export class PropertyListingComponent {
   @Input() id!: number;
   @Input() address!: string;
   @Input() status!: string;
-  @Input() endDate?: string;
+  @Input() endDate?: number;
   @Input() image?: string;
+  @Input() tenant1?: string;
+  @Input() tenant1Contact?: string;
 }

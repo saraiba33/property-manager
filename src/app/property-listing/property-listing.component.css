@@ -3,7 +3,7 @@
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 50px;
-    grid-template-rows: 100px auto auto;
+    grid-template-rows: 100px auto auto auto;
     box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
     justify-content: flex-start;
 }
@@ -12,7 +12,7 @@
     .property-listing {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto auto;
+        grid-template-rows: 1fr auto auto auto auto;
         box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
     }
 }
@@ -61,9 +61,17 @@
     font-size: 18px;
 }
 
-.end-date {
+.tenant-info {
     grid-column: 1 / span 1;
     grid-row: 3 /span 1;
+    padding-left: 40px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.end-date {
+    grid-column: 1 / span 1;
+    grid-row: 4 /span 1;
     padding-left: 40px;
     font-size: 18px;
     padding-bottom: 20px;
@@ -88,12 +96,19 @@
         grid-row: 3 /span 1;
         font-size: 16px;
         padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .tenant-info {
+        grid-column: 1 / span 1;
+        grid-row: 4 /span 1;
+        padding-left: 40px;
+        font-size: 18px;
     }
     .end-date {
         grid-column: 1 / span 1;
-        grid-row: 4 /span 1;
+        grid-row: 5 /span 1;
         font-size: 16px;
-        padding: 10px 40px;
+        padding: 20px 40px;
     }
 }
 

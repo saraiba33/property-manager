@@ -3,5 +3,8 @@ export type Property = {
   image: string;
   address: string;
   status: string;
-  endDate: string;
+  endDate: number;
+  rentAmount: number;
+  tenant1: string;
+  tenant1Contact: string;
 };

@@ -8,6 +8,10 @@ type PropertyResponse = {
   properties: Property[];
 };
 
+type AddResponse = {
+  property: Property;
+};
+
 const propertiesEndpoint = `${environment.baseApiUrl}/api/properties`;
 @Injectable({
   providedIn: 'root',
@@ -23,8 +27,8 @@ export class PropertyService {
     const url = `${propertiesEndpoint}/${id}`;
     return this.http.get<Property>(url);
   }
-}
 
-// getProperty(id: number, properties: Property[]) {
-//     return properties.find((property) => property.id == id);
-//   }
+  addProperty(property: Property) {
+    return this.http.post<AddResponse>(`${propertiesEndpoint}`, property);
+  }
+}

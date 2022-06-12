@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { PropertyService } from '../property.service';
 import { Property } from 'src/models/property';
 
 @Component({
@@ -8,7 +8,13 @@ import { Property } from 'src/models/property';
   styleUrls: ['./add-property.component.css'],
 })
 export class AddPropertyComponent {
-  addPropertyInfo(values: Property[]) {
-    console.log(values);
+  property!: Property;
+
+  constructor(private propertyService: PropertyService) {}
+
+  addPropertyInfo(newProperty: Property) {
+    this.propertyService
+      .addProperty(newProperty)
+      .subscribe((response) => (this.property = response.property));
   }
 }
