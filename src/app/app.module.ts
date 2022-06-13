@@ -14,6 +14,7 @@ import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { PropertyComponent } from './property/property.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PropertyDetailsComponent } from './property-details/property-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MyPropertiesComponent,
     PropertyComponent,
     AddPropertyComponent,
+    PropertyDetailsComponent,
   ],
   imports: [
     BrowserModule,

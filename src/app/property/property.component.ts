@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Property } from 'src/models/property';
 import { PropertyService } from '../property.service';
@@ -8,8 +8,8 @@ import { PropertyService } from '../property.service';
   templateUrl: './property.component.html',
   styleUrls: ['./property.component.css'],
 })
-export class PropertyComponent implements OnInit {
-  property!: Property;
+export class PropertyComponent {
+  property?: Property;
   error = false;
 
   constructor(
@@ -17,11 +17,20 @@ export class PropertyComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {
-    this.propertyService
-      .getProperty(+this.route.snapshot.params['id'])
-      .subscribe((response) => {
-        this.property = response;
-      });
+  ngOnInit() {
+    this.propertyService.fetchProperty().subscribe((propertyResponse) => {
+      this.property = this.propertyService.getProperty(
+        +this.route.snapshot.params['id'],
+        propertyResponse.properties
+      );
+    });
   }
 }
+
+// ngOnInit(): void {
+//   this.propertyService
+//     .getProperty(+this.route.snapshot.params['id'], this.property)
+//     .subscribe((response) => {
+//       this.property = response;
+//     });
+// }

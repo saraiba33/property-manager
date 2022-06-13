@@ -1,18 +1,34 @@
 <a routerLink="/my-properties" class="back-link">Go back</a>
 
-<p *ngIf="error; else propertyDetail" class="error">There was a problem getting the property list.</p>
+<!-- <p *ngIf="error; else propertyDetail" class="error">There was a problem getting the property list.</p>
 <ng-template #propertyDetail>
     <ul class="properties-container" *ngIf="property">
-        <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
-        </app-property-listing>
+        <app-property-details [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate">
+        </app-property-details>
     </ul>
-</ng-template>
+</ng-template> -->
 
 
-<!-- <div class="individual-porperty">
+
+
+
+
+<div class="individual-porperty">
     <div *ngIf="property">
-        <img src="" alt="{{property.id}}">
+        <img src="{{property.image}}" alt="{{property.id}}">
         <h3>{{property.address}}</h3>
         <p>{{property.status}}</p>
         <p>{{property.endDate}}</p>
-    </div> -->
+        <p>{{property.rentAmount}}</p>
+        <p>{{property.tenant1}}</p>
+        <p>{{property.tenant1Contact}}</p>
+        <p>{{property.tenant2}}</p>
+        <p>{{property.tenant2Contact}}</p>
+        <p>{{property.emergencyContact1}}</p>
+        <p>{{property.emergencyNumber1}}</p>
+        <p>{{property.emergencyContact2}}</p>
+        <p>{{property.emergencyNumber2}}</p>
+
+
+    </div>
+</div>

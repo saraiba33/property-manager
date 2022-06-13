@@ -23,12 +23,15 @@ export class PropertyService {
     return this.http.get<PropertyResponse>(propertiesEndpoint);
   }
 
-  getProperty(id: number): Observable<Property> {
-    const url = `${propertiesEndpoint}/${id}`;
-    return this.http.get<Property>(url);
+  getProperty(id: number, properties: Property[]) {
+    return properties.find((property) => property.id == id);
   }
 
   addProperty(property: Property) {
     return this.http.post<AddResponse>(`${propertiesEndpoint}`, property);
   }
+
+  // deleteProperty(property: Property) {
+  //   return this.http.delete<AddResponse>(`${propertiesEndpoint}/${id}`);
+  // }
 }

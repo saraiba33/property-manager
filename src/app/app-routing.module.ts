@@ -21,7 +21,7 @@ const routes: Routes = [
     component: LandingComponent,
   },
   {
-    path: 'my-properties/:id',
+    path: 'property/:id',
     component: PropertyComponent,
   },
   {

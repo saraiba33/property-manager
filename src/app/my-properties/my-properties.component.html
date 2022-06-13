@@ -7,7 +7,7 @@
 
     <ul class="properties-container">
         <li *ngFor="let property of properties">
-            <a routerLink="/my-properties/{{property.id}}">
+            <a routerLink="/property/{{property.id}}">
                 <app-property-listing [image]="property.image" [address]="property.address" [status]="property.status" [endDate]="property.endDate" [tenant1]="property.tenant1" [tenant1Contact]="property.tenant1Contact">
                 </app-property-listing>
             </a>
