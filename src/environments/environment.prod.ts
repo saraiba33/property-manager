@@ -1,4 +1,4 @@
-import { apiEnvironment } from 'src/environments/api.environment';
+import { apiEnvironment } from 'src/private-environment/api.environment';
 
 export const environment = {
   production: true,

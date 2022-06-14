@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
-import { apiEnvironment } from 'src/environments/api.environment';
+import { apiEnvironment } from 'src/private-environment/api.environment';
 
 const mapKey = apiEnvironment.googleMapApi;
 @Component({
@@ -11,7 +11,7 @@ const mapKey = apiEnvironment.googleMapApi;
 export class RentComparablesComponent {
   ngOnInit(): void {
     let loader = new Loader({
-      apiKey: `${mapKey}`,
+      apiKey: 'mapKey',
     });
     loader.load().then(() => {
       new google.maps.Map(document.querySelector('#map') as HTMLElement, {
