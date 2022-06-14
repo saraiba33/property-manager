@@ -11,7 +11,7 @@ const mapKey = apiEnvironment.googleMapApi;
 export class RentComparablesComponent {
   ngOnInit(): void {
     let loader = new Loader({
-      apiKey: 'mapKey',
+      apiKey: `${mapKey}`,
     });
     loader.load().then(() => {
       new google.maps.Map(document.querySelector('#map') as HTMLElement, {
