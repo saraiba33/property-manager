@@ -26,10 +26,8 @@
                 <p>{{property.emergencyContact2}}</p>
                 <p>{{property.emergencyNumber2}}</p>
             </div>
-        </div>
-        <div>
             <button>Edit</button>
-            <button>Delete</button>
+            <button (click)="deleteProperty(property.id)">Delete</button>
         </div>
     </section>
 

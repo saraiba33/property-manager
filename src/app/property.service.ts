@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Property } from 'src/models/property';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 type PropertyResponse = {
   properties: Property[];
@@ -30,7 +31,7 @@ export class PropertyService {
     return this.http.post<AddResponse>(`${propertiesEndpoint}`, property);
   }
 
-  // deleteProperty(property: Property) {
-  //   return this.http.delete<AddResponse>(`${propertiesEndpoint}/${id}`);
-  // }
+  deleteProperty(id: number): Observable<object> {
+    return this.http.delete(`${propertiesEndpoint}/${id}`);
+  }
 }

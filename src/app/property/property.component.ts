@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Property } from 'src/models/property';
 import { PropertyService } from '../property.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-property',
@@ -14,7 +15,8 @@ export class PropertyComponent {
 
   constructor(
     private propertyService: PropertyService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -25,12 +27,14 @@ export class PropertyComponent {
       );
     });
   }
-}
 
-// ngOnInit(): void {
-//   this.propertyService
-//     .getProperty(+this.route.snapshot.params['id'], this.property)
-//     .subscribe((response) => {
-//       this.property = response;
-//     });
-// }
+  getPropertyListing() {
+    this.router.navigate(['/my-properties']);
+  }
+
+  deleteProperty(id: number) {
+    this.propertyService
+      .deleteProperty(id)
+      .subscribe(() => this.getPropertyListing());
+  }
+}
