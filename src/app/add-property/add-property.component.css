@@ -18,3 +18,42 @@ input[type=submit] {
     border: none;
     font-size: 18px;
 }
+
+.back-container {
+    display: flex;
+    justify-content: end;
+    flex-wrap: nowrap;
+    margin-top: 18px;
+}
+
+.back-link {
+    background-color: #6AB9D9;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.back-link:link {
+    color: white;
+}
+
+
+/* visited link */
+
+.back-link:visited {
+    color: white;
+}
+
+
+/* mouse over link */
+
+.back-link:hover {
+    background-color: #4563BF;
+}
+
+
+/* selected link */
+
+.back-link:active {
+    color: yellow;
+}

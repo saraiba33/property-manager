@@ -1,4 +1,7 @@
 <h2>Add New Property</h2>
+<div class="back-container">
+    <a routerLink="/my-properties" class="back-link">Go back</a>
+</div>
 <form #addProperty="ngForm" (ngSubmit)="addPropertyInfo(addProperty.value)">
     <div class="address">
         <label class="address">Address</label>
