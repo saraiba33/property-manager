@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseApiUrl: 'http://localhost:8080',
+  googleMapApi: 'AIzaSyAgjmGx21vHLLLFLrtuJJjqSElP1ToVFBQ',
 };
 
 /*
