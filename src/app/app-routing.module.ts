@@ -5,6 +5,7 @@ import { LandingComponent } from './landing/landing.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { PropertyComponent } from './property/property.component';
+import { RentComparablesComponent } from './rent-comparables/rent-comparables.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'add-property',
     component: AddPropertyComponent,
+  },
+  {
+    path: 'rent-comps',
+    component: RentComparablesComponent,
   },
   {
     path: '**',
