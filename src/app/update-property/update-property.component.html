@@ -1,5 +1,5 @@
 <div class="update-form">
-    <form #addProperty="ngForm" (ngSubmit)="updateProperty(addProperty.value)">
+    <form #update="ngForm" (ngSubmit)="submitUpdate(update.value.id, update.value)">
         <div class="address">
             <label class="address">Address</label>
             <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel />
@@ -44,11 +44,6 @@
         <label>Emergency Contact Number</label>
         <input name="emergencNumber2" type="text" placeholder="e.g. 555-555-5555" ngModel />
 
-        <!-- <label for="lease-upload">Lease Upload</label>
-          <input type="file" name="lease-upload" ngModel>
-
-          <label for="app-upload">Application Upload</label>
-          <input type="file" name="app-upload" ngModel> -->
 
         <input type="submit" value="Update">
 

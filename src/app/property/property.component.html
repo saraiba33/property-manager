@@ -34,9 +34,9 @@
             <p>{{property.emergencyNumber2}}</p>
         </div>
         <div class="action-buttons">
-            <button class="update" (click)="showUpdateForm()">Edit</button>
+            <button class="update" (click)="showUpdateForm(property)">Edit</button>
             <button class="delete" (click)="deleteProperty(property.id)">Delete</button>
         </div>
+        <app-update-property></app-update-property>
     </section>
 </ng-template>
-<app-update-property></app-update-property>

@@ -36,6 +36,6 @@ export class PropertyService {
   }
 
   updateProperty(id: number, property: Property) {
-    return this.http.put(`${propertiesEndpoint}/${id}`, property);
+    return this.http.put(`${propertiesEndpoint}/${id}`, property).subscribe();
   }
 }

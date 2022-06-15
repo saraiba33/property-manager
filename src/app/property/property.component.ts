@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Property } from 'src/models/property';
 import { PropertyService } from '../property.service';
 import { Router } from '@angular/router';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class PropertyComponent {
   property?: Property;
   error = false;
+  @ViewChild('update') form!: NgForm;
 
   constructor(
     private propertyService: PropertyService,
@@ -38,7 +39,23 @@ export class PropertyComponent {
       .subscribe(() => this.getPropertyListing());
   }
 
-  showUpdateForm() {
+  showUpdateForm(property: Property) {
     document.querySelector('.update-form')?.classList.add('show');
+    console.log(this.form);
+    this.form.setValue({
+      address: property.address,
+      status: property.status,
+      endDate: property.endDate,
+      rentAmount: property.rentAmount,
+      image: property.image,
+      tenant1: property.tenant1,
+      tenant1Contact: property.tenant1Contact,
+      tenant2: property.tenant2,
+      tenant2Contact: property.tenant2Contact,
+      emergencyContact1: property.emergencyContact1,
+      emergencNumber1: property.emergencyNumber1,
+      emergencyContact2: property.emergencyContact2,
+      emergencNumber2: property.emergencyNumber2,
+    });
   }
 }
