@@ -37,4 +37,8 @@ export class PropertyComponent {
       .deleteProperty(id)
       .subscribe(() => this.getPropertyListing());
   }
+
+  showUpdateForm() {
+    document.querySelector('.update-form')?.classList.add('show');
+  }
 }

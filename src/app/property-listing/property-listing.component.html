@@ -1,9 +1,23 @@
-<div class="property-listing">
+<!-- <div class="property-listing">
     <img class="property-image" src="{{image}}" alt="property" />
     <p class="address">{{address}}</p>
     <p class="status">{{status}}</p>
     <p class="tenant-info">Tenant Contact: <br>{{tenant1}} {{tenant1Contact}}</p>
     <p class="end-date">Lease end date: {{endDate}}</p>
     <label for="delete-property"></label>
-    <!-- <input type="checkbox" id="delete-property" name="delete-property" value="delete-property"> -->
+    <input type="checkbox" id="delete-property" name="delete-property" value="delete-property">
+</div> -->
+
+
+<div class="property-listing">
+    <div class="address">
+        <span class="material-symbols-outlined">home_pin</span>
+        <p>{{address}}</p>
+    </div>
+    <img class="property-image" src="{{image}}" alt="property" />
+    <div class="quick-details">
+        <p class="status">{{status}}</p>
+        <p class="tenant-info">Tenant Contact: <br>{{tenant1}} {{tenant1Contact}}</p>
+        <p class="end-date">Lease end date: {{endDate}}</p>
+    </div>
 </div>

@@ -1,34 +1,42 @@
-<h2>Property Detials</h2>
+<h2>Property Details</h2>
 <div class="back-container">
     <a routerLink="/my-properties" class="back-link">Go back</a>
 </div>
 
 <p *ngIf="error; else propertyDetail" class="error">There was a problem getting the property list.</p>
 <ng-template #propertyDetail>
-    <section class="individual-porperty">
-        <div class="property-container" *ngIf="property">
-            <img class="property-image" src="{{property.image}}" alt="{{property.id}}">
-            <div class="property-info">
-                <h3>Property Info:</h3>
-                <p>{{property.address}}</p>
-                <p>{{property.status}}</p>
-                <p>{{property.endDate}}</p>
-                <p>${{property.rentAmount}}</p>
-            </div>
-            <div class="tenant-info">
-                <h3>Tenant Info:</h3>
-                <p>{{property.tenant1}}</p>
-                <p>{{property.tenant1Contact}}</p>
-                <p>{{property.tenant2}}</p>
-                <p>{{property.tenant2Contact}}</p>
-                <p>{{property.emergencyContact1}}</p>
-                <p>{{property.emergencyNumber1}}</p>
-                <p>{{property.emergencyContact2}}</p>
-                <p>{{property.emergencyNumber2}}</p>
-            </div>
-            <button>Edit</button>
-            <button (click)="deleteProperty(property.id)">Delete</button>
+    <section class="property-container" *ngIf="property">
+        <img class="property-image" src="{{property.image}}" alt="{{property.id}}">
+        <div class="property-info">
+            <h3>Property Info:</h3>
+            <h4>Address: </h4>
+            <p>{{property.address}}</p>
+            <h4>Status:</h4>
+            <p>{{property.status}}</p>
+            <h4>End Data: </h4>
+            <p>{{property.endDate}}</p>
+            <h4>Rent Amount: </h4>
+            <p>${{property.rentAmount}}</p>
+        </div>
+        <div class="tenant-info">
+            <h3>Tenant Info:</h3>
+            <h4> Tenant 1: </h4>
+            <p>{{property.tenant1}}</p>
+            <p>{{property.tenant1Contact}}</p>
+            <h4>Tenant 2:</h4>
+            <p>{{property.tenant2}}</p>
+            <p>{{property.tenant2Contact}}</p>
+            <h4>Emergency Contact 1:</h4>
+            <p>{{property.emergencyContact1}}</p>
+            <p>{{property.emergencyNumber1}}</p>
+            <h4>Emergency Contact 2: </h4>
+            <p>{{property.emergencyContact2}}</p>
+            <p>{{property.emergencyNumber2}}</p>
+        </div>
+        <div class="action-buttons">
+            <button class="update" (click)="showUpdateForm()">Edit</button>
+            <button class="delete" (click)="deleteProperty(property.id)">Delete</button>
         </div>
     </section>
-
 </ng-template>
+<app-update-property></app-update-property>

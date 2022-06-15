@@ -1,0 +1,12 @@
+.update-form {
+    display: none;
+}
+
+.show {
+    display: grid;
+    grid-column: 1fr;
+}
+
+.hide-property {
+    display: none;
+}

@@ -1,28 +1,42 @@
-.individual-porperty {
-    background-color: white;
-}
-
 .property-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 100px;
     margin-top: 40px;
+    background-color: white;
 }
 
 .property-image {
     grid-column: 1/ span 2;
     justify-self: center;
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+p {
+    margin: 10px;
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .property-info {
     grid-column: 1/ span 1;
     grid-row: 2/ span 1;
+    margin-bottom: 30px;
+    margin-left: 40px;
 }
 
 .tenant-info {
-    grid-column: 1/ span 1;
-    grid-row: 3/ span 1;
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 1;
 }
 
 .back-container {
@@ -61,5 +75,82 @@
 /* selected link */
 
 .back-link:active {
+    color: yellow;
+}
+
+.action-buttons {
+    grid-column: 1/ span 2;
+    grid-row: 4/ span 1;
+}
+
+.delete {
+    background-color: #6AB9D9;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.delete:link {
+    color: white;
+}
+
+
+/* visited link */
+
+.delete:visited {
+    color: white;
+}
+
+
+/* mouse over link */
+
+.delete:hover {
+    background-color: #4563BF;
+}
+
+
+/* selected link */
+
+.delete:active {
+    color: yellow;
+}
+
+.update {
+    background-color: #6AB9D9;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.update:link {
+    color: white;
+}
+
+
+/* visited link */
+
+.update:visited {
+    color: white;
+}
+
+
+/* mouse over link */
+
+.update:hover {
+    background-color: #4563BF;
+}
+
+
+/* selected link */
+
+.update:active {
     color: yellow;
 }

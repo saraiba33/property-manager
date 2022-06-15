@@ -9,15 +9,15 @@ const mapKey = apiEnvironment.googleMapApi;
   styleUrls: ['./rent-comparables.component.css'],
 })
 export class RentComparablesComponent {
-  ngOnInit(): void {
-    let loader = new Loader({
-      apiKey: `${mapKey}`,
-    });
-    loader.load().then(() => {
-      new google.maps.Map(document.querySelector('#map') as HTMLElement, {
-        center: { lat: 51.233334, lng: 6.78333 },
-        zoom: 6,
-      });
-    });
-  }
+  // ngOnInit(): void {
+  //   let loader = new Loader({
+  //     apiKey: `${mapKey}`,
+  //   });
+  //   loader.load().then(() => {
+  //     new google.maps.Map(document.querySelector('#map') as HTMLElement, {
+  //       center: { lat: 38.8339, lng: -104.8214 },
+  //       zoom: 6,
+  //     });
+  //   });
+  // }
 }

@@ -1,18 +1,21 @@
 .property-listing {
     background-color: white;
     margin-top: 40px;
+    padding-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 50px;
     grid-template-rows: 100px auto auto auto;
     box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
     justify-content: flex-start;
+    align-content: center;
+    border-radius: 3px;
 }
 
 @media (max-width: 790px) {
     .property-listing {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto auto auto;
+        grid-template-rows: 1fr auto auto;
         box-shadow: 2px 2px 2px 2px hsla(225, 51%, 62%, 0.76);
     }
 }
@@ -52,6 +55,13 @@
     font-weight: 600;
     padding-top: 20px;
     padding-left: 20px;
+    text-decoration: none;
+    display: flex;
+    text-decoration: none;
+}
+
+.address:visited {
+    color: black;
 }
 
 .status {
@@ -64,7 +74,7 @@
 .tenant-info {
     grid-column: 1 / span 1;
     grid-row: 3 /span 1;
-    padding-left: 40px;
+    padding: 20px 40px;
     font-size: 18px;
     line-height: 30px;
 }
@@ -72,9 +82,8 @@
 .end-date {
     grid-column: 1 / span 1;
     grid-row: 4 /span 1;
-    padding-left: 40px;
+    padding: 20px 40px;
     font-size: 18px;
-    padding-bottom: 20px;
 }
 
 @media (max-width: 790px) {
@@ -91,9 +100,12 @@
         font-size: 18px;
         font-weight: 600;
     }
+    .quick-details {
+        grid-column: 1/ span 1;
+        grid-row: 3 / span 1;
+        margin-top: 50px;
+    }
     .status {
-        grid-column: 1 / span 1;
-        grid-row: 3 /span 1;
         font-size: 16px;
         padding-top: 10px;
         padding-bottom: 20px;
@@ -112,31 +124,12 @@
     }
 }
 
-
-/* #delete-property {
-    justify-self: center;
-    align-self: center;
-    grid-column: 3 / span 1;
-    grid-row: 2 /span 1;
-} */
-
-input[type=checkbox] {
-    transform: scale(1.5);
-    justify-self: center;
-    align-self: center;
-    grid-column: 3 / span 1;
-    grid-row: 2 /span 1;
+.quick-details {
+    grid-column: 1/ span 1;
+    grid-row: 2 / span 3;
 }
 
-
-/* label {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    align-items: end;
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    font-size: 30px;
 }
-
-input {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-    align-items: center;
-} */

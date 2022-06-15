@@ -34,4 +34,8 @@ export class PropertyService {
   deleteProperty(id: number): Observable<object> {
     return this.http.delete(`${propertiesEndpoint}/${id}`);
   }
+
+  updateProperty(id: number, property: Property) {
+    return this.http.put(`${propertiesEndpoint}/${id}`, property);
+  }
 }
