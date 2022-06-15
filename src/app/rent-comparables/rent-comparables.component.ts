@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
-import { apiEnvironment } from 'src/private-environment/api.environment';
+import { environment } from 'src/environments/environment';
 import { RentComparablesService } from '../rent-comparables.service';
 
-const mapKey = apiEnvironment.googleMapApi;
+const mapKey = environment.apiKey;
 @Component({
   selector: 'app-rent-comparables',
   templateUrl: './rent-comparables.component.html',
