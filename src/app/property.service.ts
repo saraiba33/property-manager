@@ -3,6 +3,14 @@ import { Property } from 'src/models/property';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
 
 type PropertyResponse = {
   properties: Property[];
@@ -35,7 +43,9 @@ export class PropertyService {
     return this.http.delete(`${propertiesEndpoint}/${id}`);
   }
 
-  updateProperty(id: number, property: Property) {
-    return this.http.put(`${propertiesEndpoint}/${id}`, property).subscribe();
+  updateProperty(id: number, property: Property): Observable<Property> {
+    return this.http
+      .put<Property>(`${propertiesEndpoint}/${id}`, property, httpOptions)
+      .pipe(map((response: Property) => response));
   }
 }

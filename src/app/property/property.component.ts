@@ -39,9 +39,23 @@ export class PropertyComponent {
       .subscribe(() => this.getPropertyListing());
   }
 
+  hideForm() {
+    document.querySelector('.update-form')?.classList.remove('show');
+  }
+
+  getUpdatedProperty(id: number) {
+    this.router.navigate([`/my-properties`]);
+  }
+
+  submitUpdate(id: number, property: Property) {
+    const updatedProperty: any = this.property;
+    this.propertyService
+      .updateProperty(id, updatedProperty)
+      .subscribe(() => this.getPropertyListing());
+  }
+
   showUpdateForm(property: Property) {
     document.querySelector('.update-form')?.classList.add('show');
-    console.log(this.form);
     this.form.setValue({
       address: property.address,
       status: property.status,
@@ -53,9 +67,17 @@ export class PropertyComponent {
       tenant2: property.tenant2,
       tenant2Contact: property.tenant2Contact,
       emergencyContact1: property.emergencyContact1,
-      emergencNumber1: property.emergencyNumber1,
+      emergencyNumber1: property.emergencyNumber1,
       emergencyContact2: property.emergencyContact2,
-      emergencNumber2: property.emergencyNumber2,
+      emergencyNumber2: property.emergencyNumber2,
     });
   }
 }
+
+//   addPropertyInfo(newProperty: Property) {
+//     this.propertyService
+//       .addProperty(newProperty)
+//       .subscribe((response) =>
+//         this.getPropertyListing((this.property = response.property))
+//       );
+//   }

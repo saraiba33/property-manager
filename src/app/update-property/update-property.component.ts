@@ -11,12 +11,12 @@ import { PropertyService } from '../property.service';
 export class UpdatePropertyComponent {
   constructor(private propertyService: PropertyService) {}
 
-  hideForm() {
-    document.querySelector('.update-form')?.classList.remove('show');
-  }
+  // hideForm() {
+  //   document.querySelector('.update-form')?.classList.remove('show');
+  // }
 
-  submitUpdate(id: number, value: Property) {
-    console.log(id, value);
-    this.propertyService.updateProperty(id, value);
-  }
+  // submitUpdate(id: number, value: Property) {
+  //   console.log(id, value);
+  //   this.propertyService.updateProperty(id, value);
+  // }
 }

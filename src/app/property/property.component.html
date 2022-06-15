@@ -37,6 +37,57 @@
             <button class="update" (click)="showUpdateForm(property)">Edit</button>
             <button class="delete" (click)="deleteProperty(property.id)">Delete</button>
         </div>
-        <app-update-property></app-update-property>
+        <div class="update-form">
+            <form #update="ngForm" (ngSubmit)="submitUpdate(property.id, update.value)">
+                <div class="address">
+                    <label class="address">Address</label>
+                    <input name="address" type="text" placeholder="e.g. 123 Some Road" [(ngModel)]="property.address" />
+                </div>
+                <label>Property status</label>
+                <select name="status" [(ngModel)]="property.status">
+          <option value="Rented">Rented</option>
+          <option value="Vacant">Vacant</option>
+          <option value="Under-renovation">Under Renovation</option>
+        </select>
+
+                <label>Image Url</label>
+                <input name="image" type="text" [(ngModel)]="property.image" />
+
+                <label>Lease End Date</label>
+                <input name="endDate" type="date" [(ngModel)]="property.endDate" />
+
+                <label>Rent Amount</label>
+                <input name="rentAmount" type="number" [(ngModel)]="property.rentAmount" />
+
+                <label>Tenant 1</label>
+                <input name="tenant1" type="text" placeholder="e.g. John Doe" [(ngModel)]="property.tenant1" />
+
+                <label>Contact Number</label>
+                <input name="tenant1Contact" type="text" placeholder="e.g. 555-555-5555" [(ngModel)]="property.tenant1Contact" />
+
+                <label>Tenant 2</label>
+                <input name="tenant2" type="text" placeholder="e.g. John Doe" [(ngModel)]="property.tenant2" />
+
+                <label>Contact Number</label>
+                <input name="tenant2Contact" type="text" placeholder="e.g. 555-555-5555" [(ngModel)]="property.tenant2Contact" />
+
+                <label>Emergency Contact 1</label>
+                <input name="emergencyContact1" type="text" placeholder="e.g. John Doe" [(ngModel)]="property.emergencyContact1" />
+
+                <label>Emergency Contact Number</label>
+                <input name="emergencyNumber1" type="text" placeholder="e.g. 555-555-5555" [(ngModel)]="property.emergencyNumber1" />
+
+                <label>Emergency Contact 2</label>
+                <input name="emergencyContact2" type="text" placeholder="e.g. John Doe" [(ngModel)]="property.emergencyContact2" />
+
+                <label>Emergency Contact Number</label>
+                <input name="emergencyNumber2" type="text" placeholder="e.g. 555-555-5555" [(ngModel)]="property.emergencyNumber2" />
+
+
+                <input type="submit" value="Update">
+
+            </form>
+            <button (click)="hideForm()">Cancel</button>
+        </div>
     </section>
 </ng-template>

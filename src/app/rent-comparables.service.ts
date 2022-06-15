@@ -22,7 +22,3 @@ export class RentComparablesService {
     return this.http.get(Url, this.options);
   }
 }
-
-// .then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));

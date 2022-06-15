@@ -12,7 +12,6 @@ const mapKey = environment.apiKey;
 export class RentComparablesComponent {
   comparable?: any;
   constructor(private rentComparablesSevice: RentComparablesService) {}
-
   ngOnInit(): void {
     let loader = new Loader({
       apiKey: `${mapKey}`,
@@ -23,11 +22,32 @@ export class RentComparablesComponent {
         zoom: 6,
       });
     });
-    this.rentComparablesSevice.getComparaables().subscribe((response) => {
-      this.comparable = response;
-      this.comparable = this.comparable.listings;
-    });
+  //   this.rentComparablesSevice.getComparaables().subscribe((response) => {
+  //     this.comparable = response;
+  //     this.comparable = this.comparable.listings;
+  //   });
   }
+  // function initMap() {
+    // initialize the map
 
-  getLatAndLng() {}
-}
+
+    // Add the markers to the map
+    markers = locations.map((location, i) => {
+      return new google.maps.Marker({
+        icon: './images/pin.svg',
+        position: location,
+        zIndex: i,
+        map: map
+      });
+    });
+
+    // Add event listeners to the markers
+    markers.map((marker:any, i: any) => {
+      marker.addListener('mouseover', () => {
+          toggleIcon(marker, true);
+      });
+      marker.addListener('mouseout', () => {
+          toggleIcon(marker, false);
+      });
+    });
+
