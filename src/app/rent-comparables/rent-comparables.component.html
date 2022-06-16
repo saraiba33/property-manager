@@ -1,24 +1,24 @@
 <section class="rent-comp">
-    <div class="map-container">
+    <!-- <div class="map-container">
         <div class="full" id="map">Map should display here</div>
-    </div>
+    </div> -->
     <div class="form-container">
         <form class="search-form" #search="ngForm" (ngSubmit)="submitForm(search.value)">
 
             <label>Property Type</label>
-            <input name="propertyType" type="text" placeholder="e.g. Single Family" ngModel ng-required="true" />
+            <input name="propertyType" type="text" placeholder="e.g. Single Family" ngModel />
 
             <label>Address</label>
-            <input name="address" type="text" placeholder="e.g. 123 Some St, Colorado Springs, CO 80909" ng-required="true" />
+            <input name="address" type="text" placeholder="e.g. 123 Some St, Colorado Springs, CO 80909" ngModel />
 
             <label>Square Footage</label>
-            <input name="squareFootage" type="number" ngModel ng-required="true" />
+            <input name="squareFootage" type="number" ngModel />
 
             <label>Bathrooms</label>
-            <input name="bathrooms" type="number" ngMode ng-required="true" />
+            <input name="bathrooms" type="number" ngModel />
 
             <label>Bedrooms</label>
-            <input name="bedrooms" type="number" ngModel ng-required="true" />
+            <input name="bedrooms" type="number" ngModel />
 
             <input class="submit" type="submit" value="Search Comps">
         </form>

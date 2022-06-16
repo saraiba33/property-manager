@@ -50,10 +50,10 @@ export class RentComparablesComponent {
     });
   }
 
-  addMarker() {
-    this.marker = new google.maps.Marker({
-      position: this.location,
-      map: this.map,
-    });
-  }
+  // addMarker() {
+  //   this.marker = new google.maps.Marker({
+  //     position: this.location,
+  //     map: this.map,
+  //   });
+  // }
 }
