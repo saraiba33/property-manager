@@ -7,6 +7,7 @@
     .nav-bar {
         display: block;
         text-align: center;
+        margin-top: 20px;
     }
 }
 
@@ -21,8 +22,11 @@
     .nav-links {
         text-decoration: none;
         color: white;
-        padding: 20px;
         font-size: 18px;
+        padding: 0;
+    }
+    li {
+        padding: 5px;
     }
 }
 
@@ -30,23 +34,10 @@
     color: white;
 }
 
-
-/* visited link */
-
 .nav-links:visited {
     color: white;
 }
 
-
-/* mouse over link */
-
 .nav-links:hover {
     color: #6AB9D9;
-}
-
-
-/* selected link */
-
-.nav-links:active {
-    color: yellow;
 }

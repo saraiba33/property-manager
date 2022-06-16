@@ -18,14 +18,16 @@ select {
     margin-bottom: 20px;
 }
 
-input[type=submit] {
-    width: auto;
-    padding: 20px 30px;
-    padding-bottom: 40px;
+.add-button {
+    text-decoration: none;
+    width: 100px;
+    padding: 10px;
     background-color: #6AB9D9;
     color: white;
     border: none;
+    margin: 10px;
     font-size: 18px;
+    border-radius: 4px;
 }
 
 .back-container {
@@ -36,20 +38,28 @@ input[type=submit] {
 }
 
 .back-link {
-    background-color: #6AB9D9;
     text-decoration: none;
+    width: 100px;
     padding: 10px;
+    background-color: #6AB9D9;
+    color: white;
+    border: none;
+    font-size: 18px;
     border-radius: 4px;
+    text-align: center;
 }
 
-.back-link:link {
+.back-link:link,
+.add-button:link {
     color: white;
 }
 
-.back-link:visited {
+.back-link:visited,
+.add-button:visited {
     color: white;
 }
 
-.back-link:hover {
+.back-link:hover,
+.add-button:hover {
     background-color: #4563BF;
 }

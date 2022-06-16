@@ -17,7 +17,7 @@ export class AddPropertyComponent {
   ) {}
 
   getPropertyListing(property: Property) {
-    this.router.navigate(['/my-properties']);
+    this.router.navigate([`/my-properties`]);
   }
 
   addPropertyInfo(newProperty: Property) {

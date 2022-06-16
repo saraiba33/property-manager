@@ -6,24 +6,24 @@
         <form class="search-form" #search="ngForm" (ngSubmit)="submitForm(search.value)">
 
             <label>Property Type</label>
-            <input name="propertyType" type="text" placeholder="e.g. Single Family" ngModel />
+            <input name="propertyType" type="text" placeholder="e.g. Single Family" ngModel ng-required="true" />
 
             <label>Address</label>
-            <input name="address" type="text" placeholder="e.g. 123 Some St, Colorado Springs, CO 80909" ngModel />
+            <input name="address" type="text" placeholder="e.g. 123 Some St, Colorado Springs, CO 80909" ng-required="true" />
 
             <label>Square Footage</label>
-            <input name="squareFootage" type="number" ngModel />
+            <input name="squareFootage" type="number" ngModel ng-required="true" />
 
             <label>Bathrooms</label>
-            <input name="bathrooms" type="number" ngModel />
+            <input name="bathrooms" type="number" ngMode ng-required="true" />
 
             <label>Bedrooms</label>
-            <input name="bedrooms" type="number" ngModel />
+            <input name="bedrooms" type="number" ngModel ng-required="true" />
 
             <input class="submit" type="submit" value="Search Comps">
         </form>
     </div>
-    <div class="results">
+    <div class="hidden results">
         <h3 class="comparisons-heading">Rental Comparisons</h3>
         <!-- <app-property-details></app-property-details> -->
         <div class="results" *ngFor="let comp of comparable">

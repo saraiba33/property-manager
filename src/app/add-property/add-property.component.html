@@ -5,17 +5,17 @@
 <form #addProperty="ngForm" (ngSubmit)="addPropertyInfo(addProperty.value)">
     <div class="address">
         <label class="address">Address</label>
-        <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel required />
+        <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel required="true" />
     </div>
     <label>Property status</label>
-    <select name="status" ng ngModel>
+    <select name="status" ngModel=>
     <option value="Rented">Rented</option>
     <option value="Vacant">Vacant</option>
     <option value="Under-renovation">Under Renovation</option>
   </select>
 
     <label>Image Url</label>
-    <input name="image" type="text" ngModel />
+    <input name="image" type="text" ngModel required="true" />
 
     <label>Lease End Date</label>
     <input name="endDate" type="date" ngModel />
@@ -53,6 +53,6 @@
     <label for="app-upload">Application Upload</label>
     <input type="file" name="app-upload" ngModel> -->
 
-    <input type="submit" value="Add">
+    <input class="add-button" type="submit" value="Add">
 
 </form>

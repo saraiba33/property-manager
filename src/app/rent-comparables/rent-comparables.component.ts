@@ -27,25 +27,26 @@ export class RentComparablesComponent {
 
   constructor(private rentComparablesSevice: RentComparablesService) {}
 
-  ngOnInit(): void {
-    let loader = new Loader({
-      apiKey: `${mapKey}`,
-    });
-    loader.load().then(() => {
-      this.map = new google.maps.Map(
-        document.querySelector('#map') as HTMLElement,
-        {
-          center: this.location,
-          zoom: 14,
-        }
-      );
-    });
-  }
+  // ngOnInit(): void {
+  //   let loader = new Loader({
+  //     apiKey: `${mapKey}`,
+  //   });
+  //   loader.load().then(() => {
+  //     this.map = new google.maps.Map(
+  //       document.querySelector('#map') as HTMLElement,
+  //       {
+  //         center: this.location,
+  //         zoom: 14,
+  //       }
+  //     );
+  //   });
+  // }
 
   submitForm(values: Param) {
     this.rentComparablesSevice.getComparaables(values).subscribe((response) => {
       this.comparable = response;
       this.comparable = this.comparable.listings;
+      document.querySelector('.hidden')?.classList.remove('hidden');
     });
   }
 

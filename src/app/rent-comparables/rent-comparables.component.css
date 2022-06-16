@@ -5,48 +5,48 @@
         background-color: antiquewhite;
         border-radius: 4px;
     }
-
+    
     .rent-comp {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         justify-items: center;
     }
-
+    
     .map-container {
         grid-column: 1 /span 1;
         grid-row: 1/ span 1;
         justify-self: center;
     }
-
+    
     .form-container {
         grid-column: 2 /span 1;
         grid-row: 1/ span 1;
         justify-self: center;
         align-self: center;
     }
-
+    
     .search-form {
         width: 100%;
     }
-
+    
     input,
     label {
         display: block;
         font-size: 20px;
     }
-
+    
     label {
         margin-bottom: 5px;
     }
-
+    
     input {
         width: 400px;
         padding: 8px;
         border-radius: 4px;
         margin-bottom: 20px;
     }
-
+    
     .submit {
         width: auto;
         padding: 10px 20px;
@@ -55,19 +55,19 @@
         border: none;
         font-size: 18px;
     }
-
+    
     .submit:link {
         color: white;
     }
-
+    
     .submit:visited {
         color: white;
     }
-
+    
     .submit:hover {
         background-color: #4563BF;
     }
-
+    
     .results {
         grid-column: 1 / span 2;
         grid-row: 2 / span 1;
@@ -76,10 +76,14 @@
         font-size: 20px;
         background-color: white;
     }
-
+    
     .comparisons-heading {
         font-size: 30px;
         font-weight: 600px;
         padding: 30px;
         text-align: center;
+    }
+    
+    .hidden {
+        display: none;
     }

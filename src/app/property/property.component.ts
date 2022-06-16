@@ -39,19 +39,16 @@ export class PropertyComponent {
       .subscribe(() => this.getPropertyListing());
   }
 
-  hideForm() {
-    document.querySelector('.update-form')?.classList.remove('show');
-  }
-
   getUpdatedProperty(id: number) {
-    this.router.navigate([`/my-properties`]);
+    this.router.navigate([`/property/${id}`]);
   }
 
   submitUpdate(id: number, property: Property) {
     const updatedProperty: any = this.property;
     this.propertyService
       .updateProperty(id, updatedProperty)
-      .subscribe(() => this.getPropertyListing());
+      .subscribe(() => this.getUpdatedProperty(id));
+    document.querySelector('.update-form')?.classList.remove('show');
   }
 
   showUpdateForm(property: Property) {
@@ -71,6 +68,11 @@ export class PropertyComponent {
       emergencyContact2: property.emergencyContact2,
       emergencyNumber2: property.emergencyNumber2,
     });
+  }
+
+  hideForm(id: number) {
+    document.querySelector('.update-form')?.classList.remove('show');
+    this.router.navigate([`/property/${id}`]);
   }
 }
 
