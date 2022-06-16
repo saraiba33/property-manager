@@ -26,6 +26,5 @@ export class AddPropertyComponent {
       .subscribe((response) =>
         this.getPropertyListing((this.property = response.property))
       );
-    console.log(this.property);
   }
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +37,6 @@ import { UpdatePropertyComponent } from './update-property/update-property.compo
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

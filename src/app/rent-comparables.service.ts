@@ -1,24 +1,55 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { rentComp } from 'src/environments/environment';
+import { Param } from 'src/models/param';
+import { Comparable, Listings } from 'src/models/comparable';
 
-const Url = `${rentComp.apiUrl}/rentalPrice?compCount=5&propertyType=Duplex-Triplex&squareFootage=900&bathrooms=1&address=4028%20E%20San%20Miguel%20St%2C%20Colorado%20Springs%2C%20CO%2080909&bedrooms=2`;
+const url = 'https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice';
+
+type ComparableResponse = {
+  comparable: Listings;
+};
 
 @Injectable({
   providedIn: 'root',
 })
 export class RentComparablesService {
-  constructor(private http: HttpClient) {}
-
   options = {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': 'fca52677e0msh346369663059d9dp12be98jsna7baf90425d0',
       'X-RapidAPI-Host': 'realty-mole-property-api.p.rapidapi.com',
     },
+    params: {
+      propertyType: ``,
+      address: ``,
+      bathrooms: ``,
+      compCount: 0,
+      squareFootage: ``,
+      bedrooms: ``,
+    },
   };
 
-  getComparaables() {
-    return this.http.get(Url, this.options);
+  constructor(private http: HttpClient) {}
+
+  getComparaables(param: Param) {
+    return this.http.get(
+      url,
+      (this.options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key':
+            'fca52677e0msh346369663059d9dp12be98jsna7baf90425d0',
+          'X-RapidAPI-Host': 'realty-mole-property-api.p.rapidapi.com',
+        },
+        params: {
+          propertyType: `${param.propertyType}`,
+          address: `${param.address}`,
+          bathrooms: `${param.bathrooms}`,
+          compCount: 4,
+          squareFootage: `${param.squareFootage}`,
+          bedrooms: `${param.bedrooms}`,
+        },
+      })
+    );
   }
 }

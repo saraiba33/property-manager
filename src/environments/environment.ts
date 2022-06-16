@@ -5,6 +5,5 @@ export const environment = {
 };
 
 export const rentComp = {
-  apiUrl:
-    'https://realty-mole-property-api.p.rapidapi.com/rentalPrice?compCount=4',
+  apiUrl: 'https://realty-mole-property-api.p.rapidapi.com',
 };

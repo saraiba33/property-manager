@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Loader } from '@googlemaps/js-api-loader';
 import { environment } from 'src/environments/environment';
 import { RentComparablesService } from '../rent-comparables.service';
-import { Comparable } from 'src/models/comparable';
+import { Param } from 'src/models/param';
+import { Listings } from 'src/models/comparable';
 
 const mapKey = environment.apiKey;
 
@@ -16,15 +17,12 @@ type Location = {
   styleUrls: ['./rent-comparables.component.css'],
 })
 export class RentComparablesComponent {
-  comparable?: Comparable;
+  comparable?: any;
+  marker: any;
+  map: any;
   location: Location = {
-    lat: 38.8339,
-    lng: -104.8214,
-  };
-
-  options = {
-    center: this.location,
-    zoom: 12,
+    lat: 38.8123,
+    lng: -104.8123,
   };
 
   constructor(private rentComparablesSevice: RentComparablesService) {}
@@ -34,35 +32,27 @@ export class RentComparablesComponent {
       apiKey: `${mapKey}`,
     });
     loader.load().then(() => {
-      new google.maps.Map(
+      this.map = new google.maps.Map(
         document.querySelector('#map') as HTMLElement,
-        this.options
+        {
+          center: this.location,
+          zoom: 16,
+        }
       );
     });
-    //   this.rentComparablesSevice.getComparaables().subscribe((response) => {
-    //     this.comparable = response;
-    //     this.comparable = this.comparable.listings;
-    //   });
   }
-  //initMap() {
-  // initialize the map
 
-  // Add the markers to the map
-  // markers = locations.map((location, i) => {
-  //   return new google.maps.Marker({
-  //     position: location,
-  //     zIndex: i,
-  //     map: map
-  //   });
-  // });
+  submitForm(values: Param) {
+    this.rentComparablesSevice.getComparaables(values).subscribe((response) => {
+      this.comparable = response;
+      this.comparable = this.comparable.listings;
+    });
+  }
 
-  // // Add event listeners to the markers
-  // markers.map((marker:any, i: any) => {
-  //   marker.addListener('mouseover', () => {
-  //       toggleIcon(marker, true);
-  //   });
-  //   marker.addListener('mouseout', () => {
-  //       toggleIcon(marker, false);
-  //   });
-  // });
+  addMarker() {
+    this.marker = new google.maps.Marker({
+      position: this.location,
+      map: this.map,
+    });
+  }
 }

@@ -1,4 +1,13 @@
 export type Comparable = {
+  rent: number;
+  rentRangeLow: number;
+  rentRangeHigh: number;
+  longitude: number;
+  latitude: number;
+  Listings: Listings[];
+};
+
+export type Listings = {
   id: string;
   formattedAddress: string;
   longitude: number;
