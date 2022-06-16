@@ -25,15 +25,9 @@
     </div>
     <div class="hidden results">
         <h3 class="comparisons-heading">Rental Comparisons</h3>
-        <!-- <app-property-details></app-property-details> -->
         <div class="results" *ngFor="let comp of comparable">
             <app-property-details [address]="comp.formattedAddress" [correlation]="comp.correlation" [price]="comp.price" [distance]="comp.distance" [propertyType]="comp.propertyType" [squareFootage]="comp.squareFootage">
             </app-property-details>
         </div>
     </div>
 </section>
-
-
-
-
-<!-- &propertyType=${Duplex-Triplex}&squareFootage=${900}&bathrooms=${1}&address=${4028%20E%20San%20Miguel%20St%2C%20Colorado%20Springs%2C%20CO%2080909}&bedrooms=${2} -->

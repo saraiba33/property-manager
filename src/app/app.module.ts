@@ -15,7 +15,6 @@ import { AddPropertyComponent } from './add-property/add-property.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
 import { RentComparablesComponent } from './rent-comparables/rent-comparables.component';
-import { UpdatePropertyComponent } from './update-property/update-property.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { UpdatePropertyComponent } from './update-property/update-property.compo
     AddPropertyComponent,
     PropertyDetailsComponent,
     RentComparablesComponent,
-    UpdatePropertyComponent,
   ],
   imports: [
     BrowserModule,

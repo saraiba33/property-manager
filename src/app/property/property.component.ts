@@ -75,11 +75,3 @@ export class PropertyComponent {
     this.router.navigate([`/property/${id}`]);
   }
 }
-
-//   addPropertyInfo(newProperty: Property) {
-//     this.propertyService
-//       .addProperty(newProperty)
-//       .subscribe((response) =>
-//         this.getPropertyListing((this.property = response.property))
-//       );
-//   }

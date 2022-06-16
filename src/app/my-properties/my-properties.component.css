@@ -2,10 +2,15 @@
     display: grid;
     grid-template-columns: 1fr;
     text-decoration: none;
+    justify-content: center;
 }
 
 a {
     text-decoration: none;
+}
+
+a:link {
+    color: black;
 }
 
 a:visited {
