@@ -36,7 +36,7 @@ export class RentComparablesComponent {
         document.querySelector('#map') as HTMLElement,
         {
           center: this.location,
-          zoom: 16,
+          zoom: 14,
         }
       );
     });
