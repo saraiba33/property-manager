@@ -1,8 +1,36 @@
-<div class="full" id="map"></div>
-<div>Map should display here</div>
+<section class="rent-comp">
+    <div class="map-container">
+        <div class="full" id="map">Map should display here</div>
+    </div>
+    <div class="form-container">
+        <form class="search-form" #search="ngForm">
+            <label>Address</label>
+            <input name="address" type="text" placeholder="e.g. 123 Some St, Colorado Springs, CO 80909" ngModel />
 
+            <label>Property Type</label>
+            <input name="property-type" type="text" placeholder="e.g. Single Family" ngModel />
 
-<!-- <div *ngFor="let comp of comparable">
+            <label>Square Footage</label>
+            <input name="squareFootage" type="number" ngModel />
+
+            <label>Bathrooms</label>
+            <input name="bathrooms" type="number" ngModel />
+
+            <label>Bedrooms</label>
+            <input name="bedrooms" type="number" ngModel />
+
+            <input class="submit" type="submit" value="Search Comps">
+        </form>
+    </div>
+    <div class="results">
+        <app-property-details></app-property-details>
+    </div>
+</section>
+
+<!-- <div class="results" *ngFor="let comp of comparable">
     <app-property-details [address]="comp.formattedAddress" [correlation]="comp.correlation" [price]="comp.price" [distance]="comp.distance" [propertyType]="comp.propertyType" [squareFootage]="comp.squareFootage">
     </app-property-details>
 </div> -->
+
+
+<!-- &propertyType=${Duplex-Triplex}&squareFootage=${900}&bathrooms=${1}&address=${4028%20E%20San%20Miguel%20St%2C%20Colorado%20Springs%2C%20CO%2080909}&bedrooms=${2} -->

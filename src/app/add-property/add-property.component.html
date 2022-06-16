@@ -5,7 +5,7 @@
 <form #addProperty="ngForm" (ngSubmit)="addPropertyInfo(addProperty.value)">
     <div class="address">
         <label class="address">Address</label>
-        <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel />
+        <input name="address" type="text" placeholder="e.g. 123 Some Road" ngModel required />
     </div>
     <label>Property status</label>
     <select name="status" ng ngModel>

@@ -91,32 +91,19 @@ h4 {
     border-radius: 4px;
     border: none;
     margin: 20px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .delete:link {
     color: white;
 }
 
-
-/* visited link */
-
 .delete:visited {
     color: white;
 }
 
-
-/* mouse over link */
-
 .delete:hover {
     background-color: #4563BF;
-}
-
-
-/* selected link */
-
-.delete:active {
-    color: yellow;
 }
 
 .update {
@@ -127,32 +114,19 @@ h4 {
     border-radius: 4px;
     border: none;
     margin: 20px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .update:link {
     color: white;
 }
 
-
-/* visited link */
-
 .update:visited {
     color: white;
 }
 
-
-/* mouse over link */
-
 .update:hover {
     background-color: #4563BF;
-}
-
-
-/* selected link */
-
-.update:active {
-    color: yellow;
 }
 
 .update-form {
