@@ -11,6 +11,8 @@
     justify-self: center;
     padding-top: 30px;
     margin-bottom: 50px;
+    width: 40%;
+    border-radius: 4px;
 }
 
 p {
