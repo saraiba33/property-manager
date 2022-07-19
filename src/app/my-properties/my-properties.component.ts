@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { catchError, throwError } from 'rxjs';
 import { Property } from 'src/models/property';
 import { PropertyService } from '../property.service';
 
@@ -14,8 +15,14 @@ export class MyPropertiesComponent implements OnInit {
   constructor(private propertyService: PropertyService) {}
 
   ngOnInit() {
-    this.propertyService.fetchProperty().subscribe((response) => {
-      this.properties = response.properties;
-    });
+    try {
+      this.propertyService.fetchProperty().subscribe((response) => {
+        this.properties = response.properties;
+        document.querySelector('.spinner')?.classList.add('hidden');
+      });
+    } catch (error) {
+      document.querySelector('.spinner')?.classList.add('hidden');
+      this.error = true;
+    }
   }
 }

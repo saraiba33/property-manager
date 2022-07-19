@@ -60,3 +60,11 @@ a:visited {
 .add-button:hover {
     background-color: #4563BF;
 }
+
+.spinner {
+    width: 300pxpx
+}
+
+.hidden {
+    display: none;
+}

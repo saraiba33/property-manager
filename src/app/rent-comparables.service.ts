@@ -16,7 +16,7 @@ export class RentComparablesService {
   options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'fca52677e0msh346369663059d9dp12be98jsna7baf90425d0',
+      'X-RapidAPI-Key': '',
       'X-RapidAPI-Host': 'realtymole-rental-estimate-v1.p.rapidapi.com',
     },
     params: {
@@ -37,8 +37,7 @@ export class RentComparablesService {
       (this.options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key':
-            'fca52677e0msh346369663059d9dp12be98jsna7baf90425d0',
+          'X-RapidAPI-Key': '',
           'X-RapidAPI-Host': 'realtymole-rental-estimate-v1.p.rapidapi.com',
         },
         params: {

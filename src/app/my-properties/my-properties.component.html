@@ -2,9 +2,9 @@
 <div class="button-container">
     <a class="add-button" routerLink="/add-property">Add New Property</a>
 </div>
+<img class="spinner" src="https://i.gifer.com/origin/ea/ea3fa7a07d9cb563d67168a6e45ed4e1_w200.webp" alt="spinner">
 <p *ngIf="error; else propertyList" class="error">There was a problem getting the property list.</p>
 <ng-template #propertyList>
-
     <ul class="properties-container">
         <li *ngFor="let property of properties">
             <a routerLink="/property/{{property.id}}">
